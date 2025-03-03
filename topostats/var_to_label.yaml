@@ -32,6 +32,7 @@ radius_max: Maximum Radius
 radius_mean: Mean Radius
 radius_median: Median Radius
 radius_min: Minimum Radius
+radius_gyr: Radius of Gyration
 smallest_bounding_length: Smallest Bounding Length
 smallest_bounding_width: Smallest Bounding Width
 volume: Volume / $\mathregular{nm^3}$

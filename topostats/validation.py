@@ -1429,6 +1429,7 @@ SUMMARY_SCHEMA = Schema(
             Optional("radius_mean"),
             Optional("radius_median"),
             Optional("radius_min"),
+            Optional("radius_gyr"),
             Optional("smallest_bounding_area"),
             Optional("smallest_bounding_length"),
             Optional("smallest_bounding_width"),

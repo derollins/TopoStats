@@ -43,6 +43,7 @@ COLUMN_SETS = {
         "radius_mean",
         "radius_median",
         "radius_min",
+        "radius_gyr",
         "smallest_bounding_area",
         "smallest_bounding_length",
         "smallest_bounding_width",

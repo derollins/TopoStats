@@ -280,7 +280,7 @@ class GrainStats:
             points = self.calculate_points(grain_mask)
             edges = self.calculate_edges(grain_mask, edge_detection_method=self.edge_detection_method)
             radius_stats = self.calculate_radius_stats(edges, points)
-            radius_gyr =  self.calculate_radius_of_gyration(points)
+            radius_gyr = self.calculate_radius_of_gyration(points)
             # hull, hull_indices, hull_simplexes = self.convex_hull(edges, output_grain)
             _, _, hull_simplexes = self.convex_hull(edges, output_grain)
             centroid = self._calculate_centroid(points)
@@ -322,7 +322,7 @@ class GrainStats:
                 "radius_max": radius_stats["max"] * length_scaling_factor,
                 "radius_mean": radius_stats["mean"] * length_scaling_factor,
                 "radius_median": radius_stats["median"] * length_scaling_factor,
-                "radius_gyr" : radius_gyr * length_scaling_factor,
+                "radius_gyr": radius_gyr * length_scaling_factor,
                 "height_min": np.nanmin(grain_mask_image) * self.metre_scaling_factor,
                 "height_max": np.nanmax(grain_mask_image) * self.metre_scaling_factor,
                 "height_median": np.nanmedian(grain_mask_image) * self.metre_scaling_factor,
@@ -519,15 +519,15 @@ class GrainStats:
         float
             The radius of gyration of the grain.
         """
-	    # Calculate the centroid of the grain
+        # Calculate the centroid of the grain
         centroid = self._calculate_centroid(points)
-	    # Calculate the displacements
+        # Calculate the displacements
         displacements = self._calculate_all_displacements(points, centroid)
-	    # Calculate squared distances
+        # Calculate squared distances
         squared_distances = [np.sum(displacement**2) for displacement in displacements]
-    	# Calculate radius of gyration
+        # Calculate radius of gyration
         rad_gyr = np.sqrt(np.mean(squared_distances))
-    
+
         return rad_gyr
 
     @staticmethod

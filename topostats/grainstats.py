@@ -507,8 +507,7 @@ class GrainStats:
     def calculate_radius_of_gyration(self, points: list) -> float:
         """
         Calculate the radius of gyration for grains.
-
-        The radius of gyration is the root mean squared distance from the centroid to all the points in the grain.
+        The radius of gyration is the root mean squared (RMS) distance from the centroid to all the points in the grain.
 
         Parameters
         ----------
